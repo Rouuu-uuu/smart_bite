@@ -1,140 +1,140 @@
 const menuData = [
   {
     name: "Spicy Chicken Rice Bowl",
-    category: "Rice Bowl",
+    category: "rice bowl",
     price: 16.9,
     desc: "Grilled chicken with hot sauce, vegetables, and rice.",
     tags: ["spicy", "savory"]
   },
   {
     name: "Creamy Carbonara Pasta",
-    category: "Pasta",
+    category: "pasta",
     price: 18.9,
     desc: "Rich and creamy pasta topped with turkey slices.",
     tags: ["creamy", "cheesy"]
   },
   {
     name: "Korean Chicken Wrap",
-    category: "Wrap",
+    category: "wrap",
     price: 15.9,
     desc: "Crunchy chicken wrap with fresh lettuce and flavorful sauce.",
     tags: ["crispy", "spicy"]
   },
   {
     name: "Classic Beef Burger",
-    category: "Burger",
+    category: "burger",
     price: 17.9,
     desc: "Juicy beef burger served with signature sauce and toasted bun.",
     tags: ["savory", "crispy"]
   },
   {
     name: "Matcha Latte",
-    category: "Drink",
+    category: "drink",
     price: 9.9,
     desc: "Smooth iced matcha latte for a refreshing finish.",
     tags: ["sweet", "creamy"]
   },
   {
     name: "Chocolate Waffle",
-    category: "Dessert",
+    category: "dessert",
     price: 12.9,
     desc: "Golden waffle topped with chocolate drizzle.",
     tags: ["sweet", "crispy"]
   },
   {
     name: "Chicken Alfredo Pasta",
-    category: "Pasta",
+    category: "pasta",
     price: 19.9,
     desc: "Creamy pasta served with grilled chicken slices.",
     tags: ["creamy", "savory"]
   },
   {
     name: "Aglio Olio Pasta",
-    category: "Pasta",
+    category: "pasta",
     price: 17.9,
     desc: "Garlic olive oil pasta with chili flakes and herbs.",
     tags: ["savory", "spicy"]
   },
   {
     name: "Double Cheese Burger",
-    category: "Burger",
+    category: "burger",
     price: 19.9,
     desc: "Beef burger topped with double cheese and signature sauce.",
     tags: ["cheesy", "savory"]
   },
   {
     name: "Chicken Burger",
-    category: "Burger",
+    category: "burger",
     price: 14.9,
     desc: "Grilled chicken burger with lettuce and mayonnaise.",
     tags: ["savory", "crispy"]
   },
   {
     name: "Grilled Salmon Bowl",
-    category: "Healthy",
+    category: "healthy",
     price: 21.9,
     desc: "Healthy salmon bowl with rice, greens, and light sauce.",
     tags: ["savory"]
   },
   {
     name: "Cheese Fries",
-    category: "Snack",
+    category: "snack",
     price: 10.9,
     desc: "Crispy fries topped with melted cheese sauce.",
     tags: ["cheesy", "crispy"]
   },
   {
     name: "BBQ Chicken Pizza",
-    category: "Pizza",
+    category: "pizza",
     price: 19.9,
     desc: "Pizza topped with BBQ chicken and melted cheese.",
     tags: ["savory", "cheesy"]
   },
   {
     name: "Strawberry Milkshake",
-    category: "Drink",
+    category: "drink",
     price: 11.9,
     desc: "Cold and creamy milkshake with strawberry flavor.",
     tags: ["sweet", "creamy"]
   },
   {
     name: "Nasi Lemak Crispy Chicken",
-    category: "Local",
+    category: "local",
     price: 15.9,
     desc: "Coconut rice served with crispy chicken, sambal, egg, and peanuts.",
     tags: ["savory", "crispy"]
   },
   {
     name: "Buttermilk Chicken Rice",
-    category: "Rice",
+    category: "rice",
     price: 16.9,
     desc: "Golden chicken pieces served with fragrant rice and creamy buttermilk sauce.",
     tags: ["creamy", "savory"]
   },
   {
     name: "Seafood Tomyam Pasta",
-    category: "Pasta",
+    category: "pasta",
     price: 19.9,
     desc: "Spicy tomyam pasta with prawns, squid, and herbs.",
     tags: ["spicy", "savory"]
   },
   {
     name: "Mushroom Soup",
-    category: "Soup",
+    category: "soup",
     price: 8.9,
     desc: "Warm creamy mushroom soup served with toasted bread.",
     tags: ["creamy", "savory"]
   },
   {
     name: "Mozzarella Chicken Chop",
-    category: "Western",
+    category: "western",
     price: 20.9,
     desc: "Grilled chicken chop topped with mozzarella cheese and black pepper sauce.",
     tags: ["cheesy", "savory"]
   },
   {
     name: "Iced Lemon Tea",
-    category: "Drink",
+    category: "drink",
     price: 6.9,
     desc: "Refreshing iced lemon tea that pairs well with any meal.",
     tags: ["sweet"]
@@ -224,7 +224,9 @@ function updateCart() {
   }
 
   cartItems.innerHTML = cart.map(item => {
-    const optionsText = item.options.length ? ` <br><small>Custom: ${item.options.join(", ")}</small>` : "";
+    const optionsText = item.options.length
+      ? `<br><small>Custom: ${item.options.join(", ")}</small>`
+      : "";
     return `<div style="margin-bottom:10px;">${item.name} - RM${item.price.toFixed(2)}${optionsText}</div>`;
   }).join("");
 
@@ -235,14 +237,15 @@ function updateCart() {
 function checkout() {
   if (cart.length === 0) {
     alert("Your cart is empty!");
-  } else {
-    alert("Order placed successfully!");
-    cart = [];
-    document.querySelectorAll(".custom-option").forEach(option => {
-      option.checked = false;
-    });
-    updateCart();
+    return;
   }
+
+  alert("Order placed successfully!");
+  cart = [];
+  document.querySelectorAll(".custom-option").forEach(option => {
+    option.checked = false;
+  });
+  updateCart();
 }
 
 function addChatMessage(text, type = "bot") {
@@ -282,69 +285,109 @@ function sendChat() {
   setTimeout(() => {
     const reply = generateBotReply(userText);
     addChatMessage(reply, "bot");
-  }, 400);
+  }, 350);
+}
+
+function getItemsByTag(tag, limit = 5) {
+  return menuData
+    .filter(item => item.tags.includes(tag))
+    .slice(0, limit)
+    .map(item => item.name);
+}
+
+function getItemsBelowPrice(maxPrice, limit = 6) {
+  return menuData
+    .filter(item => item.price < maxPrice)
+    .slice(0, limit)
+    .map(item => item.name);
+}
+
+function getItemsByCategory(category, limit = 6) {
+  return menuData
+    .filter(item => item.category === category)
+    .slice(0, limit)
+    .map(item => item.name);
 }
 
 function generateBotReply(message) {
   const text = message.toLowerCase();
 
   if (text.includes("best seller") || text.includes("popular")) {
-    return "Our popular items are Spicy Chicken Rice Bowl, Classic Beef Burger, and Nasi Lemak Crispy Chicken.";
+    return "Our best sellers are Mozzarella Chicken Chop, Nasi Lemak Crispy Chicken, and Classic Beef Burger.";
+  }
+
+  if ((text.includes("below rm16") || text.includes("cheap") || text.includes("budget")) && text.includes("spicy")) {
+    const items = menuData
+      .filter(item => item.price < 16 && item.tags.includes("spicy"))
+      .map(item => item.name);
+    return items.length
+      ? "For spicy and budget-friendly choices, try: " + items.join(", ") + "."
+      : "I could not find a spicy item below RM16 right now, but Korean Chicken Wrap is a good nearby option at RM15.90.";
   }
 
   if (text.includes("below rm16") || text.includes("cheap") || text.includes("budget")) {
-    const cheapItems = menuData.filter(item => item.price < 16).map(item => item.name);
-    return "Here are good choices below RM16: " + cheapItems.slice(0, 6).join(", ") + ".";
+    const cheapItems = getItemsBelowPrice(16);
+    return "Here are good choices below RM16: " + cheapItems.join(", ") + ".";
   }
 
   if (text.includes("spicy")) {
-    const items = menuData.filter(item => item.tags.includes("spicy")).map(item => item.name);
-    return "For spicy food, I recommend: " + items.slice(0, 5).join(", ") + ".";
+    const items = getItemsByTag("spicy");
+    return "For spicy food, I recommend: " + items.join(", ") + ".";
   }
 
   if (text.includes("savory")) {
-    const items = menuData.filter(item => item.tags.includes("savory")).map(item => item.name);
-    return "If you like savory meals, try: " + items.slice(0, 5).join(", ") + ".";
+    const items = getItemsByTag("savory");
+    return "If you like savory meals, try: " + items.join(", ") + ".";
   }
 
   if (text.includes("creamy")) {
-    const items = menuData.filter(item => item.tags.includes("creamy")).map(item => item.name);
-    return "For creamy options, you can choose: " + items.slice(0, 5).join(", ") + ".";
+    const items = getItemsByTag("creamy");
+    return "For creamy options, you can choose: " + items.join(", ") + ".";
   }
 
   if (text.includes("crispy")) {
-    const items = menuData.filter(item => item.tags.includes("crispy")).map(item => item.name);
-    return "For crispy food, I suggest: " + items.slice(0, 5).join(", ") + ".";
+    const items = getItemsByTag("crispy");
+    return "For crispy food, I suggest: " + items.join(", ") + ".";
   }
 
   if (text.includes("sweet") || text.includes("dessert")) {
-    const items = menuData.filter(item => item.tags.includes("sweet")).map(item => item.name);
-    return "For sweet choices, try: " + items.slice(0, 5).join(", ") + ".";
+    const sweetItems = getItemsByTag("sweet");
+    return "For sweet choices, try: " + sweetItems.join(", ") + ".";
   }
 
   if (text.includes("cheesy")) {
-    const items = menuData.filter(item => item.tags.includes("cheesy")).map(item => item.name);
-    return "For cheesy meals, I recommend: " + items.slice(0, 5).join(", ") + ".";
+    const items = getItemsByTag("cheesy");
+    return "For cheesy meals, I recommend: " + items.join(", ") + ".";
   }
 
   if (text.includes("drink")) {
-    const items = menuData.filter(item => item.category.toLowerCase() === "drink").map(item => item.name);
+    const items = getItemsByCategory("drink");
     return "We have these drinks: " + items.join(", ") + ".";
+  }
+
+  if (text.includes("pasta")) {
+    const items = getItemsByCategory("pasta");
+    return "Our pasta options include: " + items.join(", ") + ".";
+  }
+
+  if (text.includes("burger")) {
+    const items = getItemsByCategory("burger");
+    return "Our burger choices are: " + items.join(", ") + ".";
   }
 
   if (text.includes("recommend")) {
     return "You can use the Smart Recommendation section to choose your taste and budget. It will instantly suggest suitable meals for you.";
   }
 
-  if (text.includes("checkout") || text.includes("payment")) {
+  if (text.includes("checkout") || text.includes("payment") || text.includes("pay")) {
     return "To continue your order, add items to cart and click Proceed to Checkout. Payment can be made by online banking, e-wallet, card, or cash.";
   }
 
-  if (text.includes("hello") || text.includes("hi")) {
-    return "Hello! I can help you with menu suggestions, prices, and ordering information.";
+  if (text.includes("hello") || text.includes("hi") || text.includes("hey")) {
+    return "Hello! I can help you with menu suggestions, prices, categories, and ordering information.";
   }
 
-  return "I can help with menu recommendations, taste preference, budget range, drinks, desserts, and checkout information.";
+  return "I can help with best sellers, spicy food, creamy food, burgers, pasta, drinks, desserts, budget options, and checkout information.";
 }
 
 window.addEventListener("load", () => {
