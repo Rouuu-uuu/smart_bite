@@ -1,0 +1,62 @@
+body {
+.nav {
+  background: #ff6b6b;
+  color: white;
+  padding: 10px;
+}
+
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px;
+}
+
+.container {
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.filters button {
+  margin: 5px;
+  padding: 8px;
+}
+
+#chatbox {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+}
+
+.chat-header {
+  background: #ff6b6b;
+  color: white;
+  padding: 10px;
+}
+
+.chat-input {
+  display: flex;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+}
