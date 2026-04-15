@@ -3,50 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SmartBite</title>
+  <title>SmartBite | Smart Food Ordering</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="hero">
     <div class="container nav">
-      <div class="logo">SmartBite</div>
+      <div class="logo">
+        <img src="logo.png" alt="SmartBite Logo" class="logo-img" />
+        <span>SmartBite</span>
+      </div>
+
       <nav>
         <a href="#about">About</a>
+        <a href="#highlights">Highlights</a>
         <a href="#menu">Menu</a>
-        <a href="#feature">Features</a>
+        <a href="#steps">How It Works</a>
+        <a href="#feature">Smart Order</a>
         <a href="#chat-support">AI Chat</a>
       </nav>
     </div>
 
     <div class="container hero-content">
       <div class="hero-text">
-        <span class="badge">Smart Food Ordering Experience</span>
-        <h1>SmartBite</h1>
+        <span class="badge">Smarter way to order food</span>
+        <h1>Order food faster with smart recommendations</h1>
         <p>
-          SmartBite is a modern food ordering website that helps customers discover
-          meals based on taste preference and budget. It offers a smarter, faster,
-          and more personalized ordering experience.
+          SmartBite is a modern food ordering website that helps customers find meals
+          based on taste preference, budget, and customization needs. It creates a more
+          convenient and personalized ordering experience.
         </p>
-        <a href="#menu" class="btn">Explore Menu</a>
+
+        <div class="hero-buttons">
+          <a href="#feature" class="btn primary-btn">Try Smart Order</a>
+          <a href="#menu" class="btn secondary-btn">View Menu</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-box">
+            <strong>20+</strong>
+            <span>Menu Items</span>
+          </div>
+          <div class="stat-box">
+            <strong>4.8</strong>
+            <span>Average Rating</span>
+          </div>
+          <div class="stat-box">
+            <strong>Fast</strong>
+            <span>Checkout Flow</span>
+          </div>
+        </div>
       </div>
 
-      <div class="hero-card card">
-        <p class="mini-label">Today’s Picks</p>
-        <div class="pick-item">
-          <span>Nasi Lemak Crispy Chicken</span>
-          <strong>RM15.90</strong>
+      <div class="hero-preview card">
+        <p class="preview-label">Top Picks Today</p>
+
+        <div class="preview-item">
+          <div>
+            <strong>Nasi Lemak Crispy Chicken</strong>
+            <p>Local favorite • Savory • Crispy</p>
+          </div>
+          <span>RM15.90</span>
         </div>
-        <div class="pick-item">
-          <span>Seafood Tomyam Pasta</span>
-          <strong>RM19.90</strong>
+
+        <div class="preview-item">
+          <div>
+            <strong>Seafood Tomyam Pasta</strong>
+            <p>Hot choice • Spicy • Savory</p>
+          </div>
+          <span>RM19.90</span>
         </div>
-        <div class="pick-item">
-          <span>Mozzarella Chicken Chop</span>
-          <strong>RM20.90</strong>
+
+        <div class="preview-item">
+          <div>
+            <strong>Mozzarella Chicken Chop</strong>
+            <p>Best seller • Cheesy • Western</p>
+          </div>
+          <span>RM20.90</span>
         </div>
-        <div class="pick-item">
-          <span>Iced Lemon Tea</span>
-          <strong>RM6.90</strong>
+
+        <div class="preview-item">
+          <div>
+            <strong>Strawberry Milkshake</strong>
+            <p>Sweet drink • Creamy</p>
+          </div>
+          <span>RM11.90</span>
         </div>
       </div>
     </div>
@@ -56,26 +97,87 @@
     <div class="container">
       <div class="section-title">
         <small>About SmartBite</small>
-        <h3>Modern ordering with smart recommendations</h3>
+        <h3>A modern food ordering platform</h3>
         <p>
-          SmartBite combines food ordering with a recommendation system that helps
-          customers choose meals based on flavor preference and spending budget.
-          This creates a more convenient and enjoyable dining experience.
+          SmartBite is designed to improve the online food ordering experience by combining
+          menu browsing, smart recommendation, customization, cart management, and AI support
+          in one platform.
         </p>
       </div>
 
       <div class="about-grid">
-        <div class="card">
+        <div class="card info-card">
+          <div class="icon-box">⚡</div>
           <h4>Fast Ordering</h4>
-          <p>Customers can find suitable menu items quickly without spending too much time choosing.</p>
+          <p>Customers can choose meals quickly with less time spent deciding.</p>
         </div>
-        <div class="card">
-          <h4>Personalized Experience</h4>
-          <p>The recommendation system suggests meals according to personal taste and budget.</p>
+
+        <div class="card info-card">
+          <div class="icon-box">🎯</div>
+          <h4>Smart Recommendation</h4>
+          <p>The system suggests food based on taste preference and budget range.</p>
         </div>
-        <div class="card">
-          <h4>Better Convenience</h4>
-          <p>Customers can explore menu items, add to cart, and checkout more easily.</p>
+
+        <div class="card info-card">
+          <div class="icon-box">🤖</div>
+          <h4>AI Assistance</h4>
+          <p>The AI chat assistant helps customers with menu suggestions and ordering support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="highlights" class="soft-section">
+    <div class="container">
+      <div class="section-title">
+        <small>Menu Highlights</small>
+        <h3>Popular choices customers love</h3>
+        <p>
+          Explore some of the most recommended and best-rated menu items on SmartBite.
+        </p>
+      </div>
+
+      <div class="highlight-grid">
+        <div class="card highlight-card">
+          <div class="highlight-img img1"></div>
+          <div class="highlight-body">
+            <span class="pill orange">Best Seller</span>
+            <h4>Mozzarella Chicken Chop</h4>
+            <p>Grilled chicken topped with mozzarella cheese and black pepper sauce.</p>
+            <div class="highlight-meta">
+              <span>⭐ 4.8</span>
+              <span>25 mins</span>
+              <strong>RM20.90</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="card highlight-card">
+          <div class="highlight-img img2"></div>
+          <div class="highlight-body">
+            <span class="pill green">Popular Local</span>
+            <h4>Nasi Lemak Crispy Chicken</h4>
+            <p>Fragrant coconut rice served with sambal, egg, peanuts, and crispy chicken.</p>
+            <div class="highlight-meta">
+              <span>⭐ 4.7</span>
+              <span>18 mins</span>
+              <strong>RM15.90</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="card highlight-card">
+          <div class="highlight-img img3"></div>
+          <div class="highlight-body">
+            <span class="pill blue">Hot & Spicy</span>
+            <h4>Seafood Tomyam Pasta</h4>
+            <p>Spicy tomyam pasta with seafood and aromatic herbs for bold flavor lovers.</p>
+            <div class="highlight-meta">
+              <span>⭐ 4.6</span>
+              <span>20 mins</span>
+              <strong>RM19.90</strong>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -85,10 +187,9 @@
     <div class="container">
       <div class="section-title">
         <small>Our Menu</small>
-        <h3>Explore delicious choices</h3>
+        <h3>Browse food and drinks</h3>
         <p>
-          Browse our menu categories including local favorites, western meals,
-          pasta, burgers, drinks, desserts, and more.
+          Choose from rice bowls, pasta, burgers, pizza, snacks, desserts, and refreshing drinks.
         </p>
       </div>
 
@@ -97,9 +198,13 @@
           <div class="menu-top alt1"><div class="menu-emoji">🍚</div></div>
           <div class="menu-body">
             <div class="menu-head">
-              <div><p class="menu-type">Rice Bowl</p><h4>Spicy Chicken Rice Bowl</h4></div>
+              <div>
+                <p class="menu-type">Rice Bowl</p>
+                <h4>Spicy Chicken Rice Bowl</h4>
+              </div>
               <span class="price">RM16.90</span>
             </div>
+            <div class="rating-row">⭐ 4.7 <span>• 120 reviews</span></div>
             <p>Grilled chicken with hot sauce, vegetables, and rice.</p>
             <span class="tag">spicy</span><span class="tag">savory</span>
           </div>
@@ -109,9 +214,13 @@
           <div class="menu-top alt2"><div class="menu-emoji">🍝</div></div>
           <div class="menu-body">
             <div class="menu-head">
-              <div><p class="menu-type">Pasta</p><h4>Creamy Carbonara Pasta</h4></div>
+              <div>
+                <p class="menu-type">Pasta</p>
+                <h4>Creamy Carbonara Pasta</h4>
+              </div>
               <span class="price">RM18.90</span>
             </div>
+            <div class="rating-row">⭐ 4.6 <span>• 102 reviews</span></div>
             <p>Rich and creamy pasta topped with turkey slices.</p>
             <span class="tag">creamy</span><span class="tag">cheesy</span>
           </div>
@@ -121,9 +230,13 @@
           <div class="menu-top alt3"><div class="menu-emoji">🌯</div></div>
           <div class="menu-body">
             <div class="menu-head">
-              <div><p class="menu-type">Wrap</p><h4>Korean Chicken Wrap</h4></div>
+              <div>
+                <p class="menu-type">Wrap</p>
+                <h4>Korean Chicken Wrap</h4>
+              </div>
               <span class="price">RM15.90</span>
             </div>
+            <div class="rating-row">⭐ 4.5 <span>• 88 reviews</span></div>
             <p>Crunchy chicken wrap with fresh lettuce and flavorful sauce.</p>
             <span class="tag">crispy</span><span class="tag">spicy</span>
           </div>
@@ -133,9 +246,13 @@
           <div class="menu-top alt4"><div class="menu-emoji">🍔</div></div>
           <div class="menu-body">
             <div class="menu-head">
-              <div><p class="menu-type">Burger</p><h4>Classic Beef Burger</h4></div>
+              <div>
+                <p class="menu-type">Burger</p>
+                <h4>Classic Beef Burger</h4>
+              </div>
               <span class="price">RM17.90</span>
             </div>
+            <div class="rating-row">⭐ 4.7 <span>• 140 reviews</span></div>
             <p>Juicy beef burger served with signature sauce and toasted bun.</p>
             <span class="tag">savory</span><span class="tag">crispy</span>
           </div>
@@ -145,9 +262,13 @@
           <div class="menu-top alt1"><div class="menu-emoji">🍵</div></div>
           <div class="menu-body">
             <div class="menu-head">
-              <div><p class="menu-type">Drink</p><h4>Matcha Latte</h4></div>
+              <div>
+                <p class="menu-type">Drink</p>
+                <h4>Matcha Latte</h4>
+              </div>
               <span class="price">RM9.90</span>
             </div>
+            <div class="rating-row">⭐ 4.6 <span>• 75 reviews</span></div>
             <p>Smooth iced matcha latte for a refreshing finish.</p>
             <span class="tag">sweet</span><span class="tag">creamy</span>
           </div>
@@ -157,9 +278,13 @@
           <div class="menu-top alt2"><div class="menu-emoji">🧇</div></div>
           <div class="menu-body">
             <div class="menu-head">
-              <div><p class="menu-type">Dessert</p><h4>Chocolate Waffle</h4></div>
+              <div>
+                <p class="menu-type">Dessert</p>
+                <h4>Chocolate Waffle</h4>
+              </div>
               <span class="price">RM12.90</span>
             </div>
+            <div class="rating-row">⭐ 4.5 <span>• 67 reviews</span></div>
             <p>Golden waffle topped with chocolate drizzle.</p>
             <span class="tag">sweet</span><span class="tag">crispy</span>
           </div>
@@ -169,9 +294,13 @@
           <div class="menu-top alt3"><div class="menu-emoji">🍝</div></div>
           <div class="menu-body">
             <div class="menu-head">
-              <div><p class="menu-type">Pasta</p><h4>Chicken Alfredo Pasta</h4></div>
+              <div>
+                <p class="menu-type">Pasta</p>
+                <h4>Chicken Alfredo Pasta</h4>
+              </div>
               <span class="price">RM19.90</span>
             </div>
+            <div class="rating-row">⭐ 4.6 <span>• 91 reviews</span></div>
             <p>Creamy pasta served with grilled chicken slices.</p>
             <span class="tag">creamy</span><span class="tag">savory</span>
           </div>
@@ -181,9 +310,13 @@
           <div class="menu-top alt4"><div class="menu-emoji">🍜</div></div>
           <div class="menu-body">
             <div class="menu-head">
-              <div><p class="menu-type">Pasta</p><h4>Aglio Olio Pasta</h4></div>
+              <div>
+                <p class="menu-type">Pasta</p>
+                <h4>Aglio Olio Pasta</h4>
+              </div>
               <span class="price">RM17.90</span>
             </div>
+            <div class="rating-row">⭐ 4.4 <span>• 60 reviews</span></div>
             <p>Garlic olive oil pasta with chili flakes and herbs.</p>
             <span class="tag">savory</span><span class="tag">spicy</span>
           </div>
@@ -193,9 +326,13 @@
           <div class="menu-top alt1"><div class="menu-emoji">🧀</div></div>
           <div class="menu-body">
             <div class="menu-head">
-              <div><p class="menu-type">Burger</p><h4>Double Cheese Burger</h4></div>
+              <div>
+                <p class="menu-type">Burger</p>
+                <h4>Double Cheese Burger</h4>
+              </div>
               <span class="price">RM19.90</span>
             </div>
+            <div class="rating-row">⭐ 4.7 <span>• 110 reviews</span></div>
             <p>Beef burger topped with double cheese and signature sauce.</p>
             <span class="tag">cheesy</span><span class="tag">savory</span>
           </div>
@@ -205,9 +342,13 @@
           <div class="menu-top alt2"><div class="menu-emoji">🍗</div></div>
           <div class="menu-body">
             <div class="menu-head">
-              <div><p class="menu-type">Burger</p><h4>Chicken Burger</h4></div>
+              <div>
+                <p class="menu-type">Burger</p>
+                <h4>Chicken Burger</h4>
+              </div>
               <span class="price">RM14.90</span>
             </div>
+            <div class="rating-row">⭐ 4.5 <span>• 84 reviews</span></div>
             <p>Grilled chicken burger with lettuce and mayonnaise.</p>
             <span class="tag">savory</span><span class="tag">crispy</span>
           </div>
@@ -217,9 +358,13 @@
           <div class="menu-top alt3"><div class="menu-emoji">🍣</div></div>
           <div class="menu-body">
             <div class="menu-head">
-              <div><p class="menu-type">Healthy</p><h4>Grilled Salmon Bowl</h4></div>
+              <div>
+                <p class="menu-type">Healthy</p>
+                <h4>Grilled Salmon Bowl</h4>
+              </div>
               <span class="price">RM21.90</span>
             </div>
+            <div class="rating-row">⭐ 4.8 <span>• 53 reviews</span></div>
             <p>Healthy salmon bowl with rice, greens, and light sauce.</p>
             <span class="tag">savory</span>
           </div>
@@ -229,9 +374,13 @@
           <div class="menu-top alt4"><div class="menu-emoji">🍟</div></div>
           <div class="menu-body">
             <div class="menu-head">
-              <div><p class="menu-type">Snack</p><h4>Cheese Fries</h4></div>
+              <div>
+                <p class="menu-type">Snack</p>
+                <h4>Cheese Fries</h4>
+              </div>
               <span class="price">RM10.90</span>
             </div>
+            <div class="rating-row">⭐ 4.4 <span>• 72 reviews</span></div>
             <p>Crispy fries topped with melted cheese sauce.</p>
             <span class="tag">cheesy</span><span class="tag">crispy</span>
           </div>
@@ -241,9 +390,13 @@
           <div class="menu-top alt1"><div class="menu-emoji">🍕</div></div>
           <div class="menu-body">
             <div class="menu-head">
-              <div><p class="menu-type">Pizza</p><h4>BBQ Chicken Pizza</h4></div>
+              <div>
+                <p class="menu-type">Pizza</p>
+                <h4>BBQ Chicken Pizza</h4>
+              </div>
               <span class="price">RM19.90</span>
             </div>
+            <div class="rating-row">⭐ 4.6 <span>• 66 reviews</span></div>
             <p>Pizza topped with BBQ chicken and melted cheese.</p>
             <span class="tag">savory</span><span class="tag">cheesy</span>
           </div>
@@ -253,9 +406,13 @@
           <div class="menu-top alt2"><div class="menu-emoji">🥤</div></div>
           <div class="menu-body">
             <div class="menu-head">
-              <div><p class="menu-type">Drink</p><h4>Strawberry Milkshake</h4></div>
+              <div>
+                <p class="menu-type">Drink</p>
+                <h4>Strawberry Milkshake</h4>
+              </div>
               <span class="price">RM11.90</span>
             </div>
+            <div class="rating-row">⭐ 4.7 <span>• 78 reviews</span></div>
             <p>Cold and creamy milkshake with strawberry flavor.</p>
             <span class="tag">sweet</span><span class="tag">creamy</span>
           </div>
@@ -265,9 +422,13 @@
           <div class="menu-top alt3"><div class="menu-emoji">🍛</div></div>
           <div class="menu-body">
             <div class="menu-head">
-              <div><p class="menu-type">Local</p><h4>Nasi Lemak Crispy Chicken</h4></div>
+              <div>
+                <p class="menu-type">Local</p>
+                <h4>Nasi Lemak Crispy Chicken</h4>
+              </div>
               <span class="price">RM15.90</span>
             </div>
+            <div class="rating-row">⭐ 4.8 <span>• 150 reviews</span></div>
             <p>Coconut rice served with crispy chicken, sambal, egg, and peanuts.</p>
             <span class="tag">savory</span><span class="tag">crispy</span>
           </div>
@@ -277,9 +438,13 @@
           <div class="menu-top alt4"><div class="menu-emoji">🍗</div></div>
           <div class="menu-body">
             <div class="menu-head">
-              <div><p class="menu-type">Rice</p><h4>Buttermilk Chicken Rice</h4></div>
+              <div>
+                <p class="menu-type">Rice</p>
+                <h4>Buttermilk Chicken Rice</h4>
+              </div>
               <span class="price">RM16.90</span>
             </div>
+            <div class="rating-row">⭐ 4.6 <span>• 97 reviews</span></div>
             <p>Golden chicken pieces served with fragrant rice and creamy buttermilk sauce.</p>
             <span class="tag">creamy</span><span class="tag">savory</span>
           </div>
@@ -289,9 +454,13 @@
           <div class="menu-top alt1"><div class="menu-emoji">🍝</div></div>
           <div class="menu-body">
             <div class="menu-head">
-              <div><p class="menu-type">Pasta</p><h4>Seafood Tomyam Pasta</h4></div>
+              <div>
+                <p class="menu-type">Pasta</p>
+                <h4>Seafood Tomyam Pasta</h4>
+              </div>
               <span class="price">RM19.90</span>
             </div>
+            <div class="rating-row">⭐ 4.7 <span>• 109 reviews</span></div>
             <p>Spicy tomyam pasta with prawns, squid, and herbs.</p>
             <span class="tag">spicy</span><span class="tag">savory</span>
           </div>
@@ -301,9 +470,13 @@
           <div class="menu-top alt2"><div class="menu-emoji">🍄</div></div>
           <div class="menu-body">
             <div class="menu-head">
-              <div><p class="menu-type">Soup</p><h4>Mushroom Soup</h4></div>
+              <div>
+                <p class="menu-type">Soup</p>
+                <h4>Mushroom Soup</h4>
+              </div>
               <span class="price">RM8.90</span>
             </div>
+            <div class="rating-row">⭐ 4.4 <span>• 40 reviews</span></div>
             <p>Warm creamy mushroom soup served with toasted bread.</p>
             <span class="tag">creamy</span><span class="tag">savory</span>
           </div>
@@ -313,9 +486,13 @@
           <div class="menu-top alt3"><div class="menu-emoji">🧀</div></div>
           <div class="menu-body">
             <div class="menu-head">
-              <div><p class="menu-type">Western</p><h4>Mozzarella Chicken Chop</h4></div>
+              <div>
+                <p class="menu-type">Western</p>
+                <h4>Mozzarella Chicken Chop</h4>
+              </div>
               <span class="price">RM20.90</span>
             </div>
+            <div class="rating-row">⭐ 4.8 <span>• 132 reviews</span></div>
             <p>Grilled chicken chop topped with mozzarella cheese and black pepper sauce.</p>
             <span class="tag">cheesy</span><span class="tag">savory</span>
           </div>
@@ -325,9 +502,13 @@
           <div class="menu-top alt4"><div class="menu-emoji">🍋</div></div>
           <div class="menu-body">
             <div class="menu-head">
-              <div><p class="menu-type">Drink</p><h4>Iced Lemon Tea</h4></div>
+              <div>
+                <p class="menu-type">Drink</p>
+                <h4>Iced Lemon Tea</h4>
+              </div>
               <span class="price">RM6.90</span>
             </div>
+            <div class="rating-row">⭐ 4.3 <span>• 55 reviews</span></div>
             <p>Refreshing iced lemon tea that pairs well with any meal.</p>
             <span class="tag">sweet</span>
           </div>
@@ -336,20 +517,50 @@
     </div>
   </section>
 
+  <section id="steps" class="soft-section">
+    <div class="container">
+      <div class="section-title">
+        <small>How It Works</small>
+        <h3>Order in 3 easy steps</h3>
+        <p>
+          SmartBite simplifies the ordering process from selection to checkout.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="card step-card">
+          <div class="step-number">1</div>
+          <h4>Choose Your Preference</h4>
+          <p>Select your preferred taste such as spicy, sweet, creamy, or cheesy.</p>
+        </div>
+
+        <div class="card step-card">
+          <div class="step-number">2</div>
+          <h4>Get Smart Suggestions</h4>
+          <p>The system instantly recommends menu items based on taste and budget.</p>
+        </div>
+
+        <div class="card step-card">
+          <div class="step-number">3</div>
+          <h4>Add to Cart & Checkout</h4>
+          <p>Customize the order, add items to cart, and complete your order quickly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="feature">
     <div class="container">
       <div class="section-title">
-        <small>Innovative Feature</small>
-        <h3>Smart recommendation system</h3>
+        <small>Smart Ordering Feature</small>
+        <h3>Personalized recommendation system</h3>
         <p>
-          This is the main innovation of SmartBite. Customers can choose their
-          taste preference and budget range, and the system will instantly suggest
-          suitable menu options.
+          Customers can choose their taste preference and budget to receive suitable menu suggestions instantly.
         </p>
       </div>
 
       <div class="feature-grid">
-        <div class="card">
+        <div class="card order-panel">
           <h4>Find your ideal meal</h4>
           <p>Select your taste, budget, and customize your order.</p>
 
@@ -384,24 +595,25 @@
               <label><input type="checkbox" class="custom-option" value="Add vegetables"> Add vegetables</label>
               <label><input type="checkbox" class="custom-option" value="No vegetables"> No vegetables</label>
               <label><input type="checkbox" class="custom-option" value="Extra portion"> Extra portion</label>
+              <label><input type="checkbox" class="custom-option" value="No sauce"> No sauce</label>
             </div>
           </div>
 
-          <div class="mini-grid">
-            <div class="card benefit">
-              <h4>Faster Choices</h4>
-              <p>Customers decide what to eat in less time.</p>
+          <div class="smart-tips">
+            <div class="tip-box">
+              <strong>Faster choices</strong>
+              <p>Save time deciding what to eat.</p>
             </div>
-            <div class="card benefit">
-              <h4>Better Experience</h4>
-              <p>More flexible and personalized orders.</p>
+            <div class="tip-box">
+              <strong>Personalized order</strong>
+              <p>Match food with taste and budget.</p>
             </div>
           </div>
         </div>
 
-        <div class="card">
+        <div class="card order-panel">
           <h4>Recommended for you</h4>
-          <p>Based on your selected preferences.</p>
+          <p>Results based on your selected preferences.</p>
           <div id="results"></div>
 
           <div class="cart-box">
@@ -418,13 +630,13 @@
     </div>
   </section>
 
-  <section id="chat-support">
+  <section id="chat-support" class="soft-section">
     <div class="container">
       <div class="section-title">
         <small>AI Support</small>
         <h3>SmartBite Chat Assistant</h3>
         <p>
-          Ask about menu items, price range, recommendations, and ordering help.
+          Get menu suggestions, budget-friendly options, best sellers, and ordering help.
         </p>
       </div>
 
@@ -440,22 +652,23 @@
 
           <div id="chatMessages" class="chat-messages">
             <div class="bot-msg">
-              Hello! I’m SmartBite Assistant. Ask me about menu, price, recommendations, or checkout.
+              Hello! I’m SmartBite Assistant. I can recommend food by taste, budget, or category.
             </div>
           </div>
 
           <div class="quick-questions">
-            <button onclick="askQuickQuestion('What is today best seller?')">Best seller</button>
+            <button onclick="askQuickQuestion('What is your best seller?')">Best seller</button>
             <button onclick="askQuickQuestion('Recommend something below RM16')">Below RM16</button>
-            <button onclick="askQuickQuestion('I want something spicy')">Spicy food</button>
-            <button onclick="askQuickQuestion('Do you have drinks or dessert?')">Drinks / Dessert</button>
+            <button onclick="askQuickQuestion('I want something spicy and cheap')">Spicy & cheap</button>
+            <button onclick="askQuickQuestion('Do you have drinks and desserts?')">Drinks & desserts</button>
+            <button onclick="askQuickQuestion('What should I order if I like cheesy food?')">Cheesy food</button>
           </div>
 
           <div class="chat-input-row">
             <input
               type="text"
               id="chatInput"
-              placeholder="Type your question here..."
+              placeholder="Ask about menu, price, recommendation, or checkout..."
               onkeypress="handleChatEnter(event)"
             />
             <button onclick="sendChat()">Send</button>
@@ -466,8 +679,14 @@
   </section>
 
   <footer>
-    <div class="container">
-      <p>© 2026 SmartBite. All rights reserved.</p>
+    <div class="container footer-row">
+      <div>
+        <strong>SmartBite</strong>
+        <p>Smart food ordering with recommendation, cart, and AI support.</p>
+      </div>
+      <div>
+        <p>© 2026 SmartBite. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
