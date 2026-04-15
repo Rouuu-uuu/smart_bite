@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartBite Premium</title>
+
+  <!-- LINK CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- LINK JS -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-wrap">
+    <h2>🍽️ SmartBite</h2>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#ai">AI</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>Smart Food Recommendation</h1>
+  <p>Find your perfect meal instantly</p>
+</header>
+
+<section id="menu" class="container">
+  <h2>Menu</h2>
+
+  <input type="text" id="search" placeholder="Search food...">
+
+  <div class="filters">
+    <button onclick="filterMenu('all')">All</button>
+    <button onclick="filterMenu('spicy')">Spicy</button>
+    <button onclick="filterMenu('sweet')">Sweet</button>
+    <button onclick="filterMenu('cheesy')">Cheesy</button>
+  </div>
+
+  <div id="menuGrid" class="grid"></div>
+</section>
+
+<!-- AI CHAT -->
+<div id="chatbox">
+  <div class="chat-header">AI Assistant</div>
+  <div id="chatBody"></div>
+  <div class="chat-input">
+    <input id="chatInput" placeholder="Ask what to eat...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+</body>
+</html>
