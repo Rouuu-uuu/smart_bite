@@ -765,16 +765,12 @@ footer p{
     flex-direction:column;
   }
 
-  .highlight-img{
-  height:190px;
-  overflow:hidden;
-}
-
-.highlight-img img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
+.highlight-img {
+  height: 220px;
+  border-radius: 20px 20px 0 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
   .chat-input-row{
