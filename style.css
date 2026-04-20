@@ -336,6 +336,7 @@ section{
 }
 
 /* ===== MENU ===== */
+/* ===== MENU ===== */
 .menu-grid{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
@@ -361,7 +362,7 @@ section{
   border-radius:20px 20px 0 0;
 }
 
-/* Menu images: food4 - food23 */
+/* food4 开始 */
 .food4{ background-image:url("food4.jpg"); }
 .food5{ background-image:url("food5.jpg"); }
 .food6{ background-image:url("food6.jpg"); }
